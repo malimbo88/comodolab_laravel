@@ -15,7 +15,6 @@ $("#start_select").change(function(){
   // If January
   if (selected === "2020-01-01") {
     $("#end_select").children().removeClass("d-none");
-    $("#end_select").children("option:nth-child(n+3)").addClass("d-none");
   }
 
   // If february

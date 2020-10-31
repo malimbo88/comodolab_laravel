@@ -33,31 +33,31 @@ class PricelistrowsTableSeeder extends Seeder
       // => => Array opening months and price
       $rivaverde = [
         "June" => [
-          "date" => "2020-06-01",
+          "date" => $june_2020,
           "price" => 300.00
           ],
         "July" => [
-          "date" => "2020-07-01",
+          "date" => $july_2020,
           "price" => 400.00
           ],
         "August" => [
-          "date" => "2020-08-01",
+          "date" => $august_2020,
           "price" => 500.00
         ],
         "September" => [
-          "date" => "2020-09-01",
+          "date" => $september_2020,
           "price" => 600.00
         ],
         "October" => [
-          "date" => "2020-10-01",
+          "date" => $october_2020,
           "price" => 500.00
         ],
         "November" => [
-          "date" => "2020-11-01",
+          "date" => $november_2020,
           "price" => 400.00
         ],
         "December" => [
-          "date" => "2020-12-01",
+          "date" => $december_2020,
           "price" => 300.00
         ]
       ];
@@ -76,43 +76,43 @@ class PricelistrowsTableSeeder extends Seeder
       // => => Array opening months and price
       $settimana_bianca = [
         "January" => [
-          "date" => "2020-01-01",
+          "date" => $january_2020,
           "price" => 600.00
         ],
         "February" => [
-          "date" => "2020-02-01",
+          "date" => $february_2020,
           "price" => 500.00
         ],
         "March" => [
-          "date" => "2020-03-01",
+          "date" => $march_2020,
           "price" => 400.00
         ],
         "April" => [
-          "date" => "2020-04-01",
+          "date" => $april_2020,
           "price" => 300.00
         ],
         "July" => [
-          "date" => "2020-07-01",
+          "date" => $july_2020,
           "price" => 400.00
         ],
         "August" => [
-          "date" => "2020-08-01",
+          "date" => $august_2020,
           "price" => 400.00
         ],
         "September" => [
-          "date" => "2020-09-01",
+          "date" => $september_2020,
           "price" => 300.00
           ],
         "October" => [
-          "date" => "2020-10-01",
+          "date" => $october_2020,
           "price" => 400.00
           ],
         "November" => [
-          "date" => "2020-11-01",
+          "date" => $november_2020,
           "price" => 500.00
         ],
         "December" => [
-          "date" => "2020-12-01",
+          "date" => $december_2020,
           "price" => 800.00
         ],
       ];
@@ -131,43 +131,43 @@ class PricelistrowsTableSeeder extends Seeder
       // => => Array opening months and price
       $business = [
         "January" => [
-          "date" => "2020-01-01",
+          "date" => $january_2020,
           "price" => 500.00
           ],
         "February" => [
-          "date" => "2020-02-01",
+          "date" => $february_2020,
           "price" => 500.00
           ],
         "March" => [
-          "date" => "2020-03-01",
+          "date" => $march_2020,
           "price" => 500.00
         ],
         "April" => [
-          "date" => "2020-04-01",
+          "date" => $april_2020,
           "price" => 500.00
         ],
         "May" => [
-          "date" => "2020-05-01",
+          "date" => $may_2020,
           "price" => 500.00
         ],
         "June" => [
-          "date" => "2020-06-01",
+          "date" => $june_2020,
           "price" => 500.00
         ],
         "July" => [
-          "date" => "2020-07-01",
+          "date" => $july_2020,
           "price" => 500.00
         ],
         "September" => [
-          "date" => "2020-09-01",
+          "date" => $september_2020,
           "price" => 500.00
         ],
         "October" => [
-          "date" => "2020-10-01",
+          "date" => $october_2020,
           "price" => 500.00
         ],
         "November" => [
-          "date" => "2020-11-01",
+          "date" => $november_2020,
           "price" => 500.00
         ],
       ];
@@ -186,39 +186,39 @@ class PricelistrowsTableSeeder extends Seeder
       // => => Array opening months and price
       $pizza_margherita = [
         "January" => [
-          "date" => "2020-01-01",
+          "date" => $january_2020,
           "price" => 500.00
           ],
         "February" => [
-          "date" => "2020-02-01",
+          "date" => $february_2020,
           "price" => 200.00
           ],
         "June" => [
-          "date" => "2020-06-01",
+          "date" => $june_2020,
           "price" => 400.00
         ],
         "July" => [
-          "date" => "2020-07-01",
+          "date" => $july_2020,
           "price" => 600.00
         ],
         "August" => [
-          "date" => "2020-08-01",
+          "date" => $august_2020,
           "price" => 800.00
         ],
         "September" => [
-          "date" => "2020-09-01",
+          "date" => $september_2020,
           "price" => 400.00
         ],
         "October" => [
-          "date" => "2020-10-01",
+          "date" => $october_2020,
           "price" => 200.00
         ],
         "November" => [
-          "date" => "2020-11-01",
+          "date" => $november_2020,
           "price" => 400.00
         ],
         "December" => [
-          "date" => "2020-12-01",
+          "date" => $december_2020,
           "price" => 800.00
         ],
       ];
@@ -237,39 +237,39 @@ class PricelistrowsTableSeeder extends Seeder
       // => => Array opening months and price
       $mare_bello = [
         "April" => [
-          "date" => "2020-04-01",
+          "date" => $april_2020,
           "price" => 200.00
           ],
         "May" => [
-          "date" => "2020-05-01",
+          "date" => $may_2020,
           "price" => 200.00
           ],
         "June" => [
-          "date" => "2020-06-01",
+          "date" => $june_2020,
           "price" => 600.00
         ],
         "July" => [
-          "date" => "2020-07-01",
+          "date" => $july_2020,
           "price" => 800.00
         ],
         "August" => [
-          "date" => "2020-08-01",
+          "date" => $august_2020,
           "price" => 900.00
         ],
         "September" => [
-          "date" => "2020-09-01",
+          "date" => $september_2020,
           "price" => 400.00
         ],
         "October" => [
-          "date" => "2020-10-01",
+          "date" => $october_2020,
           "price" => 100.00
         ],
         "November" => [
-          "date" => "2020-11-01",
+          "date" => $november_2020,
           "price" => 100.00
         ],
         "December" => [
-          "date" => "2020-12-01",
+          "date" => $december_2020,
           "price" => 500.00
         ],
       ];

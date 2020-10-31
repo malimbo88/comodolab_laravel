@@ -10909,6 +10909,11 @@ a.text-dark:focus {
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+  height: 100%;
+}
+
 body {
   width: 100%;
   font-family: "Roboto", sans-serif;
@@ -10916,6 +10921,14 @@ body {
 
 .first_options {
   display: block !important;
+}
+
+.card-img-top {
+  height: 200px;
+}
+
+.card-body {
+  flex: 0 1 auto;
 }
 
 footer {
