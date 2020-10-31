@@ -1,0 +1,19 @@
+// Partials / _common.scss
+
+// Reset
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// Body
+body {
+  width: 100%;
+  font-family: $primary_font;
+}
+
+// Options
+.first_options {
+  display: block !important;
+}

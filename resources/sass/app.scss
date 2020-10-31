@@ -1,0 +1,11 @@
+// Sass / app.scss
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// Common
+@import "partials/_mixins";
+@import "partials/_variables";
+@import "partials/_common";
+@import "partials/_header";
+@import "partials/_footer";
