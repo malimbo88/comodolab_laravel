@@ -23,6 +23,9 @@ class CreateHotelsTable extends Migration
             // Location
             $table->text("location");
 
+            // Image
+            $table->string("image");
+
             // Hotel created_at and updated_at
             $table->timestamps();
         });

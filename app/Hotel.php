@@ -9,7 +9,8 @@ class Hotel extends Model
     // Fillable columns
     protected $fillable = [
       "name",
-      "location"
+      "location",
+      "image"
     ];
 
     // Hotel has many Pricelistrow

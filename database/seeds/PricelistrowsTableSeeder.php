@@ -14,6 +14,20 @@ class PricelistrowsTableSeeder extends Seeder
      */
     public function run()
     {
+      // Months (date 2020)
+      $january_2020 = "2020-01-01";
+      $february_2020 = "2020-02-01";
+      $march_2020 = "2020-03-01";
+      $april_2020 = "2020-04-01";
+      $may_2020 = "2020-05-01";
+      $june_2020 = "2020-06-01";
+      $july_2020 = "2020-07-01";
+      $august_2020 = "2020-08-01";
+      $september_2020 = "2020-09-01";
+      $october_2020 = "2020-10-01";
+      $november_2020 = "2020-11-01";
+      $december_2020 = "2020-12-01";
+
       // Hotels
       // => Rivaverde ----------------------------------------------------------
       // => => Array opening months and price
@@ -61,22 +75,6 @@ class PricelistrowsTableSeeder extends Seeder
       // => Settimana Bianca ----------------------------------------------------------
       // => => Array opening months and price
       $settimana_bianca = [
-        "September" => [
-          "date" => "2020-09-01",
-          "price" => 300.00
-          ],
-        "October" => [
-          "date" => "2020-10-01",
-          "price" => 400.00
-          ],
-        "November" => [
-          "date" => "2020-11-01",
-          "price" => 500.00
-        ],
-        "December" => [
-          "date" => "2020-12-01",
-          "price" => 800.00
-        ],
         "January" => [
           "date" => "2020-01-01",
           "price" => 600.00
@@ -92,6 +90,30 @@ class PricelistrowsTableSeeder extends Seeder
         "April" => [
           "date" => "2020-04-01",
           "price" => 300.00
+        ],
+        "July" => [
+          "date" => "2020-07-01",
+          "price" => 400.00
+        ],
+        "August" => [
+          "date" => "2020-08-01",
+          "price" => 400.00
+        ],
+        "September" => [
+          "date" => "2020-09-01",
+          "price" => 300.00
+          ],
+        "October" => [
+          "date" => "2020-10-01",
+          "price" => 400.00
+          ],
+        "November" => [
+          "date" => "2020-11-01",
+          "price" => 500.00
+        ],
+        "December" => [
+          "date" => "2020-12-01",
+          "price" => 800.00
         ],
       ];
 
@@ -126,6 +148,14 @@ class PricelistrowsTableSeeder extends Seeder
         ],
         "May" => [
           "date" => "2020-05-01",
+          "price" => 500.00
+        ],
+        "June" => [
+          "date" => "2020-06-01",
+          "price" => 500.00
+        ],
+        "July" => [
+          "date" => "2020-07-01",
           "price" => 500.00
         ],
         "September" => [
@@ -233,6 +263,14 @@ class PricelistrowsTableSeeder extends Seeder
         "October" => [
           "date" => "2020-10-01",
           "price" => 100.00
+        ],
+        "November" => [
+          "date" => "2020-11-01",
+          "price" => 100.00
+        ],
+        "December" => [
+          "date" => "2020-12-01",
+          "price" => 500.00
         ],
       ];
 
