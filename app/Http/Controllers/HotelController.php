@@ -88,6 +88,7 @@ class HotelController extends Controller
         $month_string = "month-" . strval($month_number);
         $month_addzero = strval(sprintf('%02d', $month_number));
 
+        // Only if the price field is not null
         if (!is_null($request_data[$month_string])) {
           $new_pricelistrow = new Pricelistrow();
           $new_pricelistrow->hotel_id = $new_hotel->id;
