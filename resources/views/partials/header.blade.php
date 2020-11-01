@@ -12,6 +12,9 @@
       <li class="nav-item active">
         <a class="nav-link" href=" {{ route("hotels.index")}}">Home <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href=" {{ route("hotels.create")}}">Create <span class="sr-only">(current)</span></a>
+      </li>
     </ul>
   </div>
 </nav>

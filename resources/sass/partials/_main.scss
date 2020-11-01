@@ -1,0 +1,21 @@
+// Partials / _main.scss
+
+// Main
+main {   
+  // Options input
+  .first_options {
+    display: block !important;
+  }
+
+  // Cards
+  .card {
+    .card-img-top {
+      height: 200px;
+    }
+
+    .card-body {
+      flex: 0 1 auto;
+    }
+  }
+}
+// end Main

@@ -10919,15 +10919,15 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.first_options {
+main .first_options {
   display: block !important;
 }
 
-.card-img-top {
+main .card .card-img-top {
   height: 200px;
 }
 
-.card-body {
+main .card .card-body {
   flex: 0 1 auto;
 }
 

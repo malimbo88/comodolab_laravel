@@ -22,7 +22,10 @@ class HotelController extends Controller
      */
     public function index()
     {
+        // All data from Hotel class model
         $hotels = Hotel::all();
+
+        // Return to view index
         return view("index", compact("hotels"));
     }
 
@@ -33,7 +36,7 @@ class HotelController extends Controller
      */
     public function create()
     {
-        //
+        return view("create");
     }
 
     /**
@@ -44,7 +47,59 @@ class HotelController extends Controller
      */
     public function store(Request $request)
     {
-      //
+      // Data validation
+      $request->validate(
+        [
+          "name" => "required|max:255",
+          "location" => "required|max:255",
+          "image" => "required|image",
+          "month-1" => "max:9999,99",
+          "month-2" => "max:9999,99",
+          "month-3" => "max:9999,99",
+          "month-4" => "max:9999,99",
+          "month-5" => "max:9999,99",
+          "month-6" => "max:9999,99",
+          "month-7" => "max:9999,99",
+          "month-8" => "max:9999,99",
+          "month-9" => "max:9999,99",
+          "month-10" => "max:9999,99",
+          "month-11" => "max:9999,99",
+          "month-12" => "max:9999,99"
+        ]
+      );
+      // end Data validation
+
+      // All data from request
+      $request_data = $request->all();
+
+      // Path images saved
+      $path_image = $request->file('image')->store("images", "public");
+
+      // Create new row in Hotel table
+      $new_hotel = new Hotel();
+      $new_hotel->name = $request_data['name'];
+      $new_hotel->location = $request_data['location'];
+      $new_hotel->image = $path_image;
+      $new_hotel->save();
+
+      // Create new rows in Pricelistrow table
+      for ($i = 0; $i < 12; $i++) {
+        $month_number = $i + 1;
+        $month_string = "month-" . strval($month_number);
+        $month_addzero = strval(sprintf('%02d', $month_number));
+
+        if (!is_null($request_data[$month_string])) {
+          $new_pricelistrow = new Pricelistrow();
+          $new_pricelistrow->hotel_id = $new_hotel->id;
+          $date = strtotime("2020-" . $month_addzero . "-01"); // date parse
+          $new_pricelistrow->month = date("Y-m-d", $date); // date conversion
+          $new_pricelistrow->price = $request_data[$month_string];
+          $new_pricelistrow->save();
+        }
+      }
+
+      // Redirect to view index
+      return redirect()->route('hotels.index');
     }
 
     /**
@@ -100,7 +155,12 @@ class HotelController extends Controller
 
       // If user do not select start or end month
       if ($request_data["month_start"] === null || $request_data["month_end"] === null) {
-        return view("index");
+
+        // All data from Hotel class model
+        $hotels = Hotel::all();
+
+        // Return to view index
+        return view("index", compact("hotels"));
       }
 
       // Start date
@@ -115,19 +175,19 @@ class HotelController extends Controller
 
       // Sql Query
       $best_price_hotel = DB::table("pricelistrows")
-        ->select('hotels.id', 'hotels.name')->distinct()
-        ->selectRaw("count('pricelistrows.id') as total_months")
+        ->select("hotels.id", "hotels.name", "hotels.location", "hotels.image")->distinct()
+        ->selectRaw("COUNT(pricelistrows.id) as total_months")
         ->selectRaw("SUM(pricelistrows.price) as total_price")
         ->whereBetween("month", [$month_start, $month_end])
         ->join("hotels", function($join) {
             $join->on("hotels.id", "=", "pricelistrows.hotel_id");
           })
-        ->groupBy('pricelistrows.hotel_id')
+        ->groupBy("pricelistrows.hotel_id")
         ->having("total_months", "=", $stay_months)
-        ->orderby('total_price', 'ASC')
+        ->orderby("total_price", "ASC")
         ->get();
 
-      // Return to view show
-      return view("bestpriceshow", compact("best_price_hotel"));
+      // Return to view bestpriceshow
+      return view("bestpriceshow", compact("best_price_hotel", "month_start", "month_end", "stay_months"));
     }
 }

@@ -37340,7 +37340,7 @@ $("#start_select").change(function () {
   var selected = $(this).children("option:selected").val(); // If Select a month
 
   if (selected === "") {
-    $("#start_select").children().removeClass("d-none");
+    $("#end_select").children().removeClass("d-none");
   } // If January
 
 

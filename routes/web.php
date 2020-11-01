@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HotelController@index')->name('hotels.index');
 
 // Route to index HotelController
-Route::post('/bestprice', 'HotelController@bestPrice')->name('hotels.bestprice');
+Route::get('/bestprice', 'HotelController@bestPrice')->name('hotels.bestprice');
 
 // Route resource HotelController
 Route::resource("hotels", "HotelController");

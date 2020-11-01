@@ -14,9 +14,9 @@
       <div class="col-12">
 
         {{-- Form Options months --}}
-        <form  action="{{ route("hotels.bestprice") }}" method="post">
+        <form  action="{{ route("hotels.bestprice") }}" method="get">
           @csrf
-          @method('POST')
+          @method('GET')
           <div class="row mt-5">
 
             {{-- Input month start --}}
@@ -74,11 +74,18 @@
           @foreach ($hotels as $hotel)
             <div class="col-12 col-lg-4 mb-5 d-flex justify-content-center">
               <div class="card">
-                <img class="card-img-top" src="{{ asset("img") . "/" . $hotel->image }}" alt="Card image cap">
+                {{-- {{ dd(asset("storage") . 'images/kkhMhfgMmhspBbRvZ5dghsCXUsoDHap3WfvoifQd.jpeg')}} --}}
+                {{-- Image --}}
+                @if (strpos($hotel->image, "images/") !== false)
+                  <img class="card-img-top" src="{{ asset("storage") . "/" . $hotel->image }}" alt="{{ $hotel->name }}">
+                @else
+                  <img class="card-img-top" src="{{ asset("img") . "/" . $hotel->image }}" alt="{{ $hotel->name }}">
+                @endif
+                {{-- end Image --}}
 
                 {{-- Title and Location --}}
                 <div class="card-body grow-1">
-                  <h5 class="card-title">{{ $hotel->name }}</h5>
+                  <h5 class="card-title">#{{ $hotel->id }} {{ $hotel->name }}</h5>
                   <p class="card-text">{{ $hotel->location }}</p>
                 </div>
                 {{-- end Title and Location --}}

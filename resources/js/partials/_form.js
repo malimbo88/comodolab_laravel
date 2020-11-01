@@ -9,7 +9,7 @@ $("#start_select").change(function(){
 
   // If Select a month
   if (selected === "") {
-    $("#start_select").children().removeClass("d-none");
+    $("#end_select").children().removeClass("d-none");
   }
 
   // If January
